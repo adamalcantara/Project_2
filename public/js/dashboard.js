@@ -17,6 +17,7 @@ const userFetcher = async (event, userId) => {
     });
     console.log(currentUsersMatches);
     if (currentUsersMatches.ok) {
+        console.log("Into the garbage chute, flyboy")
         document.location.replace('/profiles');
     } else {
         alert('Failed to get matches');
@@ -27,6 +28,14 @@ const userFetcher = async (event, userId) => {
 }
 
 // document.querySelector("#get-matches").addEventListener("click", userFetcher)
+
+//Main dash button route
+const main = async () => {
+    console.log("Rattle your jewelry")
+    document.location.replace('/dashboard')
+}
+
+document.querySelector('#dash').addEventListener('click', main);
 
 //logout route
 const logout = async () => {
